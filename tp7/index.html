@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            gap: 10px;
+            justify-content: center;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(92, 97, 98, 0.386);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-weight: bold;
+            border: 2px solid #000;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background: #008CBA;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="container">
+        <div class="box" id="1" onclick="makeMove(1)"></div>
+        <div class="box" id="2" onclick="makeMove(2)"></div>
+        <div class="box" id="3" onclick="makeMove(3)"></div>
+        <div class="box" id="4" onclick="makeMove(4)"></div>
+        <div class="box" id="5" onclick="makeMove(5)"></div>
+        <div class="box" id="6" onclick="makeMove(6)"></div>
+        <div class="box" id="7" onclick="makeMove(7)"></div>
+        <div class="box" id="8" onclick="makeMove(8)"></div>
+        <div class="box" id="9" onclick="makeMove(9)"></div>
+    </div>
+    <div id="status">Tour de : <span id="player">Rouge</span></div>
+    <button onclick="resetGame()">Réinitialiser</button>
+
+    <script>
+        // const winningCombinations = [
+        //     [1, 2, 3], [4, 5, 6], [7, 8, 9], 
+        //     [1, 4, 7], [2, 5, 8], [3, 6, 9], 
+        //     [1, 5, 9], [3, 5, 7]
+        // ];
+        
+        // let currentPlayer = 'red';
+        // let boardState = {};
+
+        // function makeMove(position) {
+        //     if (boardState[position]) return;
+            
+        //     boardState[position] = currentPlayer;
+        //     document.getElementById(position).style.backgroundColor = currentPlayer;
+        //     document.getElementById(position).innerText = currentPlayer === 'red' ? 'X' : 'O';
+            
+        //     if (checkWin(currentPlayer)) {
+        //         document.getElementById('status').innerText = `${currentPlayer.toUpperCase()} a gagné !`;
+        //         disableBoard();
+        //         return;
+        //     }
+            
+        //     currentPlayer = (currentPlayer === 'red') ? 'blue' : 'red';
+        //     document.getElementById('player').innerText = currentPlayer === 'red' ? 'Rouge' : 'Bleu';
+        // }
+
+        // function checkWin(player) {
+        //     return winningCombinations.some(combination => 
+        //         combination.every(pos => boardState[pos] === player)
+        //     );
+        // }
+
+        // function disableBoard() {
+        //     document.querySelectorAll('.box').forEach(box => box.onclick = null);
+        // }
+
+        // function resetGame() {
+        //     boardState = {};
+        //     document.querySelectorAll('.box').forEach(box => {
+        //         box.style.backgroundColor = 'lightblue';
+        //         box.innerText = '';
+        //         box.onclick = () => makeMove(parseInt(box.id));
+        //     });
+        //     currentPlayer = 'red';
+        //     document.getElementById('player').innerText = 'Rouge';
+        //     document.getElementById('status').innerText = 'Tour de : ';
+        // }
+    </script>
+</body>
+</html>
