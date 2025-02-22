@@ -18,10 +18,10 @@ for (let i=0;(i<=(tableau_element.length)-1);i++){
     
     if(tableau_element[i].className == "emailstd"){
         
-        tableau_element[i].innerText += "@std.mail";
+        tableau_element[i].innerText += "@std.heh.be";
     }else{
         
-        tableau_element[i].innerText += "@mail";
+        tableau_element[i].innerText += "@heh.be";
     }
   
 
