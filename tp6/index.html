@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire Dynamique</title>
+</head>
+<body>
+    
+    <form action="" method="get">
+
+        <div>
+
+            <select name="" id="pizza" value="11">
+    
+                <option value="11" selected>Magarita</option>
+                <option value="12.5">4 Fromages</option>
+                <option value="15">Pizza a l'ananas</option>
+               
+            </select>
+            <br>
+            <label for="rad"><input type="radio" name="supp" id="rad" checked>Sans supplement</label>
+            <br>
+            <label for="rad2"><input type="radio" name="supp" id="rad2" >Avec supplement</label>
+
+            <div id="supplements" class="visible">
+                <label for="ananas"> <input class='supplement' type="checkbox" name="option[]" id="ananas" value="0.5">Ananas </label><br>
+                <label for="peperoni"> <input class='supplement' type="checkbox" name="option[]" id="peperoni" value="0.5" unchecked>Peperoni</label><br>
+                <label for="fromage"> <input class='supplement' type="checkbox" name="option[]" id="fromage" value="0.5">Fromage</label> <br>
+            </div>
+
+        </div>
+
+        <div>
+            payment
+            <br>
+            <label for="payment2"><input class='payment' type="radio" name="payment" id="payment2"  value="0" checked>CASH</label><br>
+            <br>
+            <label for="payment"><input class='payment' type="radio" name="payment" id="payment" value="2" >Visa</label>
+
+            prix:<br><span id="prix">0</span>$
+        </div>
+    </form>
+
+   
+
+
+    
+
+
+</body>
+<script src="tp6.js" defer></script>
+</html>

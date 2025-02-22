@@ -1,0 +1,16 @@
+form{
+
+    display: flex;
+
+}
+
+#select{
+    height: fit-content;
+}
+
+div{
+    margin-right: 50px;
+}
+.visible{
+    display: none;
+}
